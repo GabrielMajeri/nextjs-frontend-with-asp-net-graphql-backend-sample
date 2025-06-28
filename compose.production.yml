@@ -1,0 +1,31 @@
+services:
+  # Use nginx as a reverse proxy, in front of the Next.js server
+  reverse-proxy:
+    build: ./docker/reverse-proxy
+    ports:
+      - "80:80"
+    networks:
+      - public
+
+  # Next.js-based front end
+  frontend:
+    build: ./frontend/
+    environment:
+      WEATHER_API_URL: http://backend:8080
+    networks:
+      - public
+      - private
+
+  # ASP.net back end
+  backend:
+    build: ./backend/
+    networks:
+      - private
+
+networks:
+  public:
+    driver: bridge
+  private:
+    driver: bridge
+    # No internet access
+    internal: true
