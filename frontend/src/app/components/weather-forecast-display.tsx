@@ -23,7 +23,7 @@ export default async function WeatherForecastDisplay() {
 
     if (!response.ok) {
       throw new Error(
-        `Error response: ${response.status} ${response.statusText}`
+        `Error response: ${response.status} ${response.statusText}`,
       );
     }
 
