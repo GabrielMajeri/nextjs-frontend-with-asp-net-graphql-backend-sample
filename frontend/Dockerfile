@@ -39,6 +39,7 @@ USER nextjs
 
 EXPOSE 3000
 
+ENV NEXT_RUNTIME=nodejs
 ENV PORT=3000
 
 # server.js is created by next build from the standalone output

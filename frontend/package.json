@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "next": "15.3.4",
+    "next-logger": "^5.0.1",
+    "pino": "^9.7.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
