@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js front end
 
-## Getting Started
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It is used as a front end web app for our sample project.
 
-First, run the development server:
+## Development instructions
 
-```bash
+### Prerequisites
+
+You need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
+
+### Installing dependencies
+
+To download all of the required package dependencies, run `npm install` in a terminal in this directory. This needs to be done when your environment is set up for the first time, or after packages get changed or updated.
+
+For running end-to-end tests using [Playwright](https://playwright.dev/), you might also need to run `npx playwright install` and `npx playwright install-deps`.
+
+### Starting the local development server
+
+To start the local development server, use the following command:
+
+```shell
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can access the web app by opening [`http://localhost:3000`](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Running unit and integration tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To run unit tests using [Vitest](https://vitest.dev/), use the `npm test` command.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To run end-to-end tests using [Playwright](https://playwright.dev/), do `npm run test:e2e`. The results of the test run can be viewed in the browser by first running `npx playwright show-report`.
